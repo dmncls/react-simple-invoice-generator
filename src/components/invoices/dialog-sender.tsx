@@ -75,17 +75,6 @@ const DialogSender: FC = () => {
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            value={sender.country}
-            onChange={handleChange}
-            size="small"
-            margin="none"
-            name="country"
-            label="Country"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            fullWidth
             value={sender.phone}
             onChange={handleChange}
             size="small"

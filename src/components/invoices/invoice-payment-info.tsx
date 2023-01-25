@@ -35,21 +35,8 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
   return (
     <Box style={{ marginTop: '16px', width: '95%' }}>
       <Typography variant="h6" style={{ fontWeight: 'bold', marginBottom: editable ? 1 : createSpacing(1) }}>
-        {'Payment Info :'}
+        {'Pay by bank transfer :'}
       </Typography>
-      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Account :</Typography>
-        {editable ? (
-          <EditableText
-            sx={{ width: '100%' }}
-            name="accountNumber"
-            value={paymentInfo.accountNumber}
-            onChange={handleChange}
-          />
-        ) : (
-          <Typography>{paymentInfo.accountNumber}</Typography>
-        )}
-      </Box>
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
         <Typography style={{ width: editable ? '140px' : '80px' }}>A/C Name :</Typography>
         {editable ? (
@@ -64,7 +51,7 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
         )}
       </Box>
       <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
-        <Typography style={{ width: editable ? '140px' : '80px' }}>Bank Details :</Typography>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>BSB :</Typography>
         {editable ? (
           <EditableText
             sx={{ width: '100%' }}
@@ -74,6 +61,19 @@ const InvoicePaymentInfo: FC<Props> = ({ paymentInfo }) => {
           />
         ) : (
           <Typography>{paymentInfo.bankAccount}</Typography>
+        )}
+      </Box>
+      <Box style={{ height: editable ? 26 : 20, ...lineStyle }}>
+        <Typography style={{ width: editable ? '140px' : '80px' }}>Account :</Typography>
+        {editable ? (
+          <EditableText
+            sx={{ width: '100%' }}
+            name="accountNumber"
+            value={paymentInfo.accountNumber}
+            onChange={handleChange}
+          />
+        ) : (
+          <Typography>{paymentInfo.accountNumber}</Typography>
         )}
       </Box>
     </Box>

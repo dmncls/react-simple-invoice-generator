@@ -51,18 +51,13 @@ const InvoiceSender: FC<Props> = ({ from, handleOpenDialog }) => {
             <Typography>
               <>
                 {from.addressLine1 ? from.addressLine1 + ', ' : null}
-                {from.addressLine2 || null}
-              </>
-            </Typography>
-            <Typography>
-              <>
+                {from.addressLine2 ? from.addressLine2 + ', ' : null}
                 {from.city ? from.city + ', ' : null}
-                {from.state || null}
+                {from.state ? from.state + ' ': null}
+                {from.postalCode || null}
               </>
             </Typography>
             <Typography></Typography>
-            <Typography>{from.country || null}</Typography>
-            <Typography>{from.postalCode || null}</Typography>
             <Typography>{from.email || null}</Typography>
             <Typography>{from.phone || null}</Typography>
           </>

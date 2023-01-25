@@ -57,12 +57,11 @@ const InvoiceRecipient: FC<Props> = ({ recipient, handleOpenDialog }) => {
             <Typography>
               <>
                 {recipient.city ? recipient.city + ', ' : null}
-                {recipient.state || null}
+                {recipient.state ? recipient.state + ' ': null}
+                {recipient.postalCode || null}
               </>
             </Typography>
             <Typography></Typography>
-            <Typography>{recipient.country || null}</Typography>
-            <Typography>{recipient.postalCode || null}</Typography>
             <Typography>{recipient.email || null}</Typography>
             <Typography>{recipient.phone || null}</Typography>
           </>

@@ -75,17 +75,6 @@ const DialogRecipient: FC = () => {
         <Grid item xs={12} sm={6}>
           <TextField
             fullWidth
-            value={recipient.country}
-            onChange={handleChange}
-            size="small"
-            margin="none"
-            name="country"
-            label="Country"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            fullWidth
             value={recipient.phone}
             onChange={handleChange}
             size="small"
